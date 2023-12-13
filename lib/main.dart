@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/theme/theme_data.dart';
+import 'package:e_commerce_app/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,13 +11,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: const Center(
-          child: Text('Hello World!'),
-        ),
-        appBar: AppBar(),
-      ),
+    return MaterialApp.router(
+      routerConfig: router,
+      theme: CustomThemeData.themeData,
     );
   }
 }
